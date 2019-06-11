@@ -681,6 +681,9 @@
           spinner: "spinner4"
         });
     });
+
+    // $('.mega-menu-category').css({ display: "none"})
+    $('.mega-menu-category').hide();
   </script>
 
 
