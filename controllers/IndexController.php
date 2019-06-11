@@ -1,5 +1,9 @@
 <?php
 require_once 'Controller.php';
-$c = new Controller;
 
+class IndexController extends Controller{
+    static function getHomePage(){
+        return parent::loadView('index');
+    }
+}
 ?>
