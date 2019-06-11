@@ -7,7 +7,7 @@
             <!-- SLIDE 1 -->
             <li data-transition="slidehorizontal" data-slotamount="5" data-masterspeed="700">
               <!-- MAIN IMAGE -->
-              <img src="images/slider/slider-img1.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+              <img src="public/source/images/slider/slider-img1.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
               <!-- LAYERS -->
               <!-- LAYER NR. 1 -->
               <div class="tp-caption very_big_white skewfromrightshort fadeout" data-x="center" data-y="100" data-speed="500" data-start="1200"
@@ -32,7 +32,7 @@
             <!-- SLIDE 2 -->
             <li data-transition="slidehorizontal" data-slotamount="5" data-masterspeed="700">
               <!-- MAIN IMAGE -->
-              <img src="images/slider/slider-img2.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+              <img src="public/source/images/slider/slider-img2.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
               <!-- LAYERS -->
               <!-- LAYER NR. 1 -->
               <div class="tp-caption white_heavy_60 customin ltl tp-resizeme" data-x="310" data-y="140" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
@@ -55,7 +55,7 @@
             <!-- SLIDE 3 -->
             <li data-transition="slidehorizontal" data-slotamount="5" data-masterspeed="700">
               <!-- MAIN IMAGE -->
-              <img src="images/slider/slider-img3.jpg" alt="slidebg3" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+              <img src="public/source/images/slider/slider-img3.jpg" alt="slidebg3" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
               <!-- LAYERS -->
               <!-- LAYER NR. 1 -->
               <div class="tp-caption big_100_white lft start fadeout" data-x="310" data-y="120" data-speed="500" data-start="1200" data-easing="Circ.easeInOut"
@@ -110,8 +110,8 @@
                                 <div class="pr-img-area">
                                   <a title="Ipsums Dolors Untra" href="single_product.html">
                                     <figure>
-                                      <img class="first-img" src="images/products/img01.jpg" alt="html template">
-                                      <img class="hover-img" src="images/products/img01.jpg" alt="html template">
+                                      <img class="first-img" src="public/source/images/products/img01.jpg" alt="html template">
+                                      <img class="hover-img" src="public/source/images/products/img01.jpg" alt="html template">
                                     </figure>
                                   </a>
                                   <button type="button" class="add-to-cart-mt">
@@ -144,8 +144,8 @@
                                 <div class="pr-img-area">
                                   <a title="Ipsums Dolors Untra" href="single_product.html">
                                     <figure>
-                                      <img class="first-img" src="images/products/img02.jpg" alt="html template">
-                                      <img class="hover-img" src="images/products/img02.jpg" alt="html template">
+                                      <img class="first-img" src="public/source/images/products/img02.jpg" alt="html template">
+                                      <img class="hover-img" src="public/source/images/products/img02.jpg" alt="html template">
                                     </figure>
                                   </a>
                                   <button type="button" class="add-to-cart-mt">
@@ -185,8 +185,8 @@
                                 <div class="pr-img-area">
                                   <a title="Ipsums Dolors Untra" href="single_product.html">
                                     <figure>
-                                      <img class="first-img" src="images/products/img03.jpg" alt="html template">
-                                      <img class="hover-img" src="images/products/img03.jpg" alt="html template">
+                                      <img class="first-img" src="public/source/images/products/img03.jpg" alt="html template">
+                                      <img class="hover-img" src="public/source/images/products/img03.jpg" alt="html template">
                                     </figure>
                                   </a>
                                   <button type="button" class="add-to-cart-mt">
@@ -228,8 +228,8 @@
                                 <div class="pr-img-area">
                                   <a title="Ipsums Dolors Untra" href="single_product.html">
                                     <figure>
-                                      <img class="first-img" src="images/products/img04.jpg" alt="html template">
-                                      <img class="hover-img" src="images/products/img04.jpg" alt="html template">
+                                      <img class="first-img" src="public/source/images/products/img04.jpg" alt="html template">
+                                      <img class="hover-img" src="public/source/images/products/img04.jpg" alt="html template">
                                     </figure>
                                   </a>
                                   <button type="button" class="add-to-cart-mt">
@@ -265,8 +265,8 @@
                                 <div class="pr-img-area">
                                   <a title="Ipsums Dolors Untra" href="single_product.html">
                                     <figure>
-                                      <img class="first-img" src="images/products/img05.jpg" alt="html template">
-                                      <img class="hover-img" src="images/products/img05.jpg" alt="html template">
+                                      <img class="first-img" src="public/source/images/products/img05.jpg" alt="html template">
+                                      <img class="hover-img" src="public/source/images/products/img05.jpg" alt="html template">
                                     </figure>
                                   </a>
                                   <button type="button" class="add-to-cart-mt">
@@ -306,8 +306,8 @@
                                 <div class="pr-img-area">
                                   <a title="Ipsums Dolors Untra" href="single_product.html">
                                     <figure>
-                                      <img class="first-img" src="images/products/img06.jpg" alt="html template">
-                                      <img class="hover-img" src="images/products/img06.jpg" alt="html template">
+                                      <img class="first-img" src="public/source/images/products/img06.jpg" alt="html template">
+                                      <img class="hover-img" src="public/source/images/products/img06.jpg" alt="html template">
                                     </figure>
                                   </a>
                                   <button type="button" class="add-to-cart-mt">
@@ -354,8 +354,8 @@
                                 <div class="pr-img-area">
                                   <a title="Ipsums Dolors Untra" href="single_product.html">
                                     <figure>
-                                      <img class="first-img" src="images/products/img03.jpg" alt="html template">
-                                      <img class="hover-img" src="images/products/img03.jpg" alt="html template">
+                                      <img class="first-img" src="public/source/images/products/img03.jpg" alt="html template">
+                                      <img class="hover-img" src="public/source/images/products/img03.jpg" alt="html template">
                                     </figure>
                                   </a>
                                   <button type="button" class="add-to-cart-mt">
@@ -391,8 +391,8 @@
                                 <div class="pr-img-area">
                                   <a title="Ipsums Dolors Untra" href="single_product.html">
                                     <figure>
-                                      <img class="first-img" src="images/products/img08.jpg" alt="html template">
-                                      <img class="hover-img" src="images/products/img08.jpg" alt="html template">
+                                      <img class="first-img" src="public/source/images/products/img08.jpg" alt="html template">
+                                      <img class="hover-img" src="public/source/images/products/img08.jpg" alt="html template">
                                     </figure>
                                   </a>
                                   <button type="button" class="add-to-cart-mt">
@@ -432,8 +432,8 @@
                                 <div class="pr-img-area">
                                   <a title="Ipsums Dolors Untra" href="single_product.html">
                                     <figure>
-                                      <img class="first-img" src="images/products/img01.jpg" alt="html template">
-                                      <img class="hover-img" src="images/products/img01.jpg" alt="html template">
+                                      <img class="first-img" src="public/source/images/products/img01.jpg" alt="html template">
+                                      <img class="hover-img" src="public/source/images/products/img01.jpg" alt="html template">
                                     </figure>
                                   </a>
                                   <button type="button" class="add-to-cart-mt">
@@ -473,8 +473,8 @@
                                 <div class="pr-img-area">
                                   <a title="Ipsums Dolors Untra" href="single_product.html">
                                     <figure>
-                                      <img class="first-img" src="images/products/img04.jpg" alt="html template">
-                                      <img class="hover-img" src="images/products/img04.jpg" alt="html template">
+                                      <img class="first-img" src="public/source/images/products/img04.jpg" alt="html template">
+                                      <img class="hover-img" src="public/source/images/products/img04.jpg" alt="html template">
                                     </figure>
                                   </a>
                                   <button type="button" class="add-to-cart-mt">
@@ -509,8 +509,8 @@
                                 <div class="pr-img-area">
                                   <a title="Ipsums Dolors Untra" href="single_product.html">
                                     <figure>
-                                      <img class="first-img" src="images/products/img05.jpg" alt="html template">
-                                      <img class="hover-img" src="images/products/img05.jpg" alt="html template">
+                                      <img class="first-img" src="public/source/images/products/img05.jpg" alt="html template">
+                                      <img class="hover-img" src="public/source/images/products/img05.jpg" alt="html template">
                                     </figure>
                                   </a>
                                   <button type="button" class="add-to-cart-mt">
@@ -550,8 +550,8 @@
                                 <div class="pr-img-area">
                                   <a title="Ipsums Dolors Untra" href="single_product.html">
                                     <figure>
-                                      <img class="first-img" src="images/products/img06.jpg" alt="html template">
-                                      <img class="hover-img" src="images/products/img06.jpg" alt="html template">
+                                      <img class="first-img" src="public/source/images/products/img06.jpg" alt="html template">
+                                      <img class="hover-img" src="public/source/images/products/img06.jpg" alt="html template">
                                     </figure>
                                   </a>
                                   <button type="button" class="add-to-cart-mt">
@@ -603,8 +603,8 @@
               <div class="jtv-product">
                 <div class="product-img">
                   <a href="single_product.html">
-                    <img src="images/products/img10.jpg" alt="html template">
-                    <img class="secondary-img" src="images/products/img10.jpg" alt="html template"> </a>
+                    <img src="public/source/images/products/img10.jpg" alt="html template">
+                    <img class="secondary-img" src="public/source/images/products/img10.jpg" alt="html template"> </a>
                 </div>
                 <div class="jtv-product-content">
                   <h3>
@@ -630,8 +630,8 @@
               <div class="jtv-product jtv-cat-margin">
                 <div class="product-img">
                   <a href="single_product.html">
-                    <img src="images/products/img07.jpg" alt="html template">
-                    <img class="secondary-img" src="images/products/img08.jpg" alt="html template"> </a>
+                    <img src="public/source/images/products/img07.jpg" alt="html template">
+                    <img class="secondary-img" src="public/source/images/products/img08.jpg" alt="html template"> </a>
                 </div>
                 <div class="jtv-product-content">
                   <h3>
@@ -662,8 +662,8 @@
               <div class="jtv-product jtv-cat-margin">
                 <div class="product-img">
                   <a href="single_product.html">
-                    <img src="images/products/img08.jpg" alt="html template">
-                    <img class="secondary-img" src="images/products/img09.jpg" alt="html template"> </a>
+                    <img src="public/source/images/products/img08.jpg" alt="html template">
+                    <img class="secondary-img" src="public/source/images/products/img09.jpg" alt="html template"> </a>
                 </div>
                 <div class="jtv-product-content">
                   <h3>
@@ -694,8 +694,8 @@
               <div class="jtv-product">
                 <div class="product-img">
                   <a href="single_product.html">
-                    <img src="images/products/img12.jpg" alt="html template">
-                    <img class="secondary-img" src="images/products/img11.jpg" alt="html template"> </a>
+                    <img src="public/source/images/products/img12.jpg" alt="html template">
+                    <img class="secondary-img" src="public/source/images/products/img11.jpg" alt="html template"> </a>
                 </div>
                 <div class="jtv-product-content">
                   <h3>
@@ -726,8 +726,8 @@
               <div class="jtv-product jtv-cat-margin">
                 <div class="product-img">
                   <a href="single_product.html">
-                    <img src="images/products/img05.jpg" alt="html template">
-                    <img class="secondary-img" src="images/products/img10.jpg" alt="html template"> </a>
+                    <img src="public/source/images/products/img05.jpg" alt="html template">
+                    <img class="secondary-img" src="public/source/images/products/img10.jpg" alt="html template"> </a>
                 </div>
                 <div class="jtv-product-content">
                   <h3>
@@ -753,8 +753,8 @@
               <div class="jtv-product jtv-cat-margin">
                 <div class="product-img">
                   <a href="single_product.html">
-                    <img src="images/products/img01.jpg" alt="html template">
-                    <img class="secondary-img" src="images/products/img03.jpg" alt="html template"> </a>
+                    <img src="public/source/images/products/img01.jpg" alt="html template">
+                    <img class="secondary-img" src="public/source/images/products/img03.jpg" alt="html template"> </a>
                 </div>
                 <div class="jtv-product-content">
                   <h3>
@@ -788,7 +788,7 @@
 
               <div class="jtv-single-service">
                 <div class="service-icon">
-                  <img alt="html template" src="images/customer-service-icon.png"> </div>
+                  <img alt="html template" src="public/source/images/customer-service-icon.png"> </div>
                 <div class="service-text">
                   <h2>24/7 customer service</h2>
                   <p>
@@ -798,7 +798,7 @@
               </div>
               <div class="jtv-single-service">
                 <div class="service-icon">
-                  <img alt="html template" src="images/shipping-icon.png"> </div>
+                  <img alt="html template" src="public/source/images/shipping-icon.png"> </div>
                 <div class="service-text">
                   <h2>free shipping worldwide</h2>
                   <p>
@@ -808,7 +808,7 @@
               </div>
               <div class="jtv-single-service">
                 <div class="service-icon">
-                  <img alt="html template" src="images/guaratee-icon.png"> </div>
+                  <img alt="html template" src="public/source/images/guaratee-icon.png"> </div>
                 <div class="service-text">
                   <h2>money back guaratee!</h2>
                   <p>

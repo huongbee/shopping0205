@@ -26,31 +26,31 @@
   <!-- CSS Style -->
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="public/source/css/bootstrap.min.css">
 
   <!-- font-awesome & simple line icons CSS -->
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.css" media="all">
-  <link rel="stylesheet" type="text/css" href="css/simple-line-icons.css" media="all">
+  <link rel="stylesheet" type="text/css" href="public/source/css/font-awesome.css" media="all">
+  <link rel="stylesheet" type="text/css" href="public/source/css/simple-line-icons.css" media="all">
 
   <!-- owl.carousel CSS -->
-  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
-  <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
-  <link rel="stylesheet" type="text/css" href="css/owl.transitions.css">
+  <link rel="stylesheet" type="text/css" href="public/source/css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="public/source/css/owl.theme.css">
+  <link rel="stylesheet" type="text/css" href="public/source/css/owl.transitions.css">
 
   <!-- animate CSS  -->
-  <link rel="stylesheet" type="text/css" href="css/animate.css" media="all">
+  <link rel="stylesheet" type="text/css" href="public/source/css/animate.css" media="all">
 
   <!-- flexslider CSS -->
-  <link rel="stylesheet" type="text/css" href="css/flexslider.css">
+  <link rel="stylesheet" type="text/css" href="public/source/css/flexslider.css">
 
   <!-- jquery-ui.min CSS  -->
-  <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="public/source/css/jquery-ui.css">
 
   <!-- Revolution Slider CSS -->
-  <link href="css/revolution-slider.css" rel="stylesheet">
+  <link href="public/source/css/revolution-slider.css" rel="stylesheet">
 
   <!-- style CSS -->
-  <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+  <link rel="stylesheet" type="text/css" href="public/source/css/style.css" media="all">
 </head>
 
 <body class="cms-index-index cms-home-page">
@@ -95,7 +95,7 @@
               <!-- Header Logo -->
               <div class="logo">
                 <a title="e-commerce" href="index.html">
-                  <img alt="responsive theme logo" src="images/logo.png">
+                  <img alt="responsive theme logo" src="public/source/images//logo.png">
                 </a>
               </div>
               <!-- End Header Logo -->
@@ -591,22 +591,22 @@
                 <ul>
                   <li>
                     <a href="#">
-                      <img title="Visa" alt="Visa" src="images/visa.png">
+                      <img title="Visa" alt="Visa" src="public/source/images//visa.png">
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <img title="Paypal" alt="Paypal" src="images/paypal.png">
+                      <img title="Paypal" alt="Paypal" src="public/source/images//paypal.png">
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <img title="Discover" alt="Discover" src="images/discover.png">
+                      <img title="Discover" alt="Discover" src="public/source/images//discover.png">
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <img title="Master Card" alt="Master Card" src="images/master-card.png">
+                      <img title="Master Card" alt="Master Card" src="public/source/images//master-card.png">
                     </a>
                   </li>
                 </ul>
@@ -625,23 +625,23 @@
   <!-- JS -->
 
   <!-- jquery js -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="public/source/js/jquery.min.js"></script>
 
   <!-- bootstrap js -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="public/source/js/bootstrap.min.js"></script>
 
 
   <!-- owl.carousel.min js -->
-  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="public/source/js/owl.carousel.min.js"></script>
 
   <!-- bxslider js -->
-  <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+  <script type="text/javascript" src="public/source/js/jquery.bxslider.js"></script>
 
   <!-- Slider Js -->
-  <script type="text/javascript" src="js/revolution-slider.js"></script>
+  <script type="text/javascript" src="public/source/js/revolution-slider.js"></script>
 
   <!-- megamenu js -->
-  <script type="text/javascript" src="js/megamenu.js"></script>
+  <script type="text/javascript" src="public/source/js/megamenu.js"></script>
   <script type="text/javascript">
     /* <![CDATA[ */
     var mega_menu = '0';
@@ -650,16 +650,16 @@
   </script>
 
   <!-- jquery.mobile-menu js -->
-  <script type="text/javascript" src="js/mobile-menu.js"></script>
+  <script type="text/javascript" src="public/source/js/mobile-menu.js"></script>
 
   <!--jquery-ui.min js -->
-  <script type="text/javascript" src="js/jquery-ui.js"></script>
+  <script type="text/javascript" src="public/source/js/jquery-ui.js"></script>
 
   <!-- main js -->
-  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="public/source/js/main.js"></script>
 
   <!-- countdown js -->
-  <script type="text/javascript" src="js/countdown.js"></script>
+  <script type="text/javascript" src="public/source/js/countdown.js"></script>
 
   <!-- Revolution Slider -->
   <script type="text/javascript">
