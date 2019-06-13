@@ -8,7 +8,7 @@ class DBConnect{
      * @param string $username
      * @param string $password
      */
-    protected function __construct($dbName='php0205_shopping', $username = 'root', $password = ''){
+    function __construct($dbName='php0205_shopping', $username = 'root', $password = ''){
         $dsn = "mysql:dbname=$dbName;host=localhost";
         try{
             $this->connection = new PDO($dsn, $username, $password);
