@@ -86,10 +86,24 @@
                                   </div>
                                   <div class="item-content">
                                     <div class="item-price">
-                                      <div class="price-box">
-                                        <span class="regular-price">
-                                          <span class="price">$125.00</span>
-                                        </span>
+                                    <div class="price-box">
+                                        <?php
+                                        if($product->promotion_price!=0):
+                                        ?>
+                                        <p class="special-price">
+                                          <span class="price-label">Special Price</span>
+                                          <span class="price"> <?=number_format($product->promotion_price)?> </span>
+                                        </p>
+                                        <p class="old-price">
+                                          <span class="price-label">Regular Price:</span>
+                                          <span class="price"> <?=number_format($product->price)?> </span>
+                                        </p>
+                                        <?php else: ?>
+                                        <p class="special-price">
+                                          <span class="price-label">Special Price</span>
+                                          <span class="price"> <?=number_format($product->price)?> </span>
+                                        </p>
+                                        <?php endif?>
                                       </div>
                                     </div>
                                   </div>
