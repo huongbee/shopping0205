@@ -6,8 +6,10 @@ class IndexController extends Controller{
     static function getHomePage(){
         $model = new IndexModel();
         $slides = $model->getSlides();
+        $productsFeatured = $model->getFeaturedProduct();
         $data = [
             'slides'=>$slides,
+            'productsFeatured'=>$productsFeatured
         ];
         $title = 'Trang chủ';
         // print_r($slides); die;
