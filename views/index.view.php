@@ -64,8 +64,16 @@
                           <div class="product-item">
                             <div class="item-inner">
                               <div class="product-thumbnail">
+                              <?php
+                              if($product->promotion_price!=0):
+                              ?>
                                 <div class="icon-sale-label sale-left">Sale</div>
+                              <?php endif?>
+                              <?php
+                              if($product->new==1):
+                              ?>
                                 <div class="icon-new-label new-right">New</div>
+                              <?php endif?>
                                 <div class="pr-img-area">
                                   <a title="Ipsums Dolors Untra" href="single_product.html">
                                     <figure>
