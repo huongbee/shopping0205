@@ -6,8 +6,12 @@ class IndexController extends Controller{
     static function getHomePage(){
         $model = new IndexModel();
         $slides = $model->getSlides();
-        print_r($slides); die;
-        return parent::loadView('index','Trang chủ');
+        $data = [
+            'slides'=>$slides,
+        ];
+        $title = 'Trang chủ';
+        // print_r($slides); die;
+        return parent::loadView('index',$title, $data);
     }
 }
 ?>
