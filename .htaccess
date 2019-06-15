@@ -1,0 +1,25 @@
+RewriteEngine On
+
+RewriteRule ^trang-chu$ index.php
+RewriteRule ^home$ index.php
+
+RewriteRule ^([a-zA-Z0-9-()]+)$ detail.php 
+
+# RewriteRule ^/?secret.txt$ - [F,L]
+<Files "secret.txt">
+    deny from all
+</Files>
+
+
+ErrorDocument 404 /shopping0205/404.php
+ErrorDocument 403 /shopping0205/404.php
+
+# ^: bat dau 1 chuoi regular expression
+# $: ket thuc 1 chuoi regular expression
+# (): 1 chuoi regular expression
+# [a-zA-Z0-9]
+# /: \/
+# .: \.
+# +: bat buoc co it nhat 1 ki tu trong chuoi regular expression
+
+# iphone-x-64gb-gray
