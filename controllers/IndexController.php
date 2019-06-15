@@ -7,9 +7,11 @@ class IndexController extends Controller{
         $model = new IndexModel();
         $slides = $model->getSlides();
         $productsFeatured = $model->getFeaturedProduct();
+        $bestSeller = $model->getBestSellerProducts();
         $data = [
             'slides'=>$slides,
-            'productsFeatured'=>$productsFeatured
+            'productsFeatured'=>$productsFeatured,
+            'bestSeller'=>$bestSeller
         ];
         $title = 'Trang chủ';
         // print_r($slides); die;

@@ -16,6 +16,17 @@ class IndexModel extends DBConnect{
                 LIMIT 0,10"; // undeleted
         return $this->getMoreRows($sql);
     }
+    function getBestSellerProducts(){
+        $sql = "SELECT p.*, sum(quantity) as tongSL
+                FROM products p
+                INNER JOIN bill_detail d
+                ON p.id = d.id_product
+                WHERE p.deleted=0
+                GROUP BY p.id
+                ORDER BY tongSL DESC
+                LIMIT 0,10";
+        return $this->getMoreRows($sql);
+    }
 }
 
 ?>
