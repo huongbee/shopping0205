@@ -15,6 +15,10 @@ class DetailController extends Controller{
             header('Location:404.html');
             return;
         }
+        $idType = $product->id_type;
+        $relatedProducts = $model->getRelatedProducts($idType, $product->id);
+        // print_r($relatedProducts);
+        // die;
         $title = $product->name;
         $data = [
             'product'=>$product,
