@@ -3,7 +3,7 @@ RewriteEngine On
 RewriteRule ^trang-chu$ index.php
 RewriteRule ^home$ index.php
 
-RewriteRule ^([a-zA-Z0-9-()]+)$ detail.php 
+RewriteRule ^([a-zA-Z0-9-()]+)$ detail.php?link=$1
 
 # RewriteRule ^/?secret.txt$ - [F,L]
 <Files "secret.txt">
