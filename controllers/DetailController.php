@@ -4,6 +4,10 @@ require_once 'models/DetailModel.php';
 
 class DetailController extends Controller{
     function getDetailPage(){
+        if(!isset($_GET['link'])){
+            header('Location:404.html');
+            return;
+        }
         $url = $_GET['link'];
         $model = new DetailModel();
         $product = $model->getDetailProduct($url);
