@@ -106,7 +106,7 @@
                       <div class="icon-new-label new-right">New</div>
                     <?php endif?>
                       <div class="pr-img-area">
-                        <a title="Ipsums Dolors Untra" href="<?=$product->url?>">
+                        <a title="Ipsums Dolors Untra" href="<?=$product->url?>.html">
                           <figure>
                             <img class="first-img" src="public/source/images/products-images/<?=$product->image?>" alt="html template">
                             <img class="hover-img" src="public/source/images/products-images/<?=$product->image?>" alt="html template">
@@ -121,7 +121,7 @@
                     <div class="item-info">
                       <div class="info-inner">
                         <div class="item-title">
-                          <a title="<?=$product->name?>" href="<?=$product->url?>"><?=$product->name?></a>
+                          <a title="<?=$product->name?>" href="<?=$product->url?>.html"><?=$product->name?></a>
                         </div>
                         <div class="item-content">
                           <div class="item-price">

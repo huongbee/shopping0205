@@ -1,4 +1,6 @@
 <?php
+require_once 'models/TypeModel.php';
+
 class Controller{
     /**
      * @param string $view
@@ -6,6 +8,8 @@ class Controller{
      * @param array $data
      */
     static function loadView(string $view = 'index', string $title="Home Page", array $data = []){
+        $m = new TypeModel();
+        $categories = $m->getCategory();
         require_once 'views/master.view.php';
     }
     function error404(){
