@@ -22,6 +22,7 @@ class DetailController extends Controller{
         $title = $product->name;
         $data = [
             'product'=>$product,
+            'relatedProducts'=>$relatedProducts
         ];
         return parent::loadView('detail',$title, $data);
     }
