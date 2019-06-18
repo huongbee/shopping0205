@@ -2,6 +2,8 @@ RewriteEngine On
 
 RewriteRule ^trang-chu$ index.php
 RewriteRule ^home$ index.php
+RewriteRule ^404.html$ 404.php
+
 
 RewriteRule ^([a-zA-Z0-9-()]+)$ detail.php?link=$1
 
