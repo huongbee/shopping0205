@@ -5,7 +5,7 @@ RewriteRule ^home$ index.php
 RewriteRule ^404.html$ 404.php
 
 
-RewriteRule ^([a-zA-Z-]+)$ type.php?link=$1
+RewriteRule ^([a-zA-Z0-9-]+)$ type.php?link=$1
 RewriteRule ^([a-zA-Z0-9-()]+).html$ detail.php?link=$1
 
 

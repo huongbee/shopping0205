@@ -11,6 +11,7 @@ class TypeController extends Controller{
         $url = $_GET['link'];
         $model = new TypeModel();
         $type = $model->getTypeByUrl($url);
+        
         if(!$type){
             header('Location: 404.html');
             return;
