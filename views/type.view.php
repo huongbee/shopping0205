@@ -7,9 +7,12 @@
           <div class="page-title">
             <h2><?= $data['nameType'] ?></h2>
           </div>
-
+          <?php if(count($data['products'])==0):?>
+          <p>Không tìm thấy sản phẩm</p>
+          <?php else: ?>
           <div class="product-grid-area">
             <ul class="products-grid">
+              
               <?php foreach ($data['products'] as $product) : ?>
                 <li class="item col-lg-3 col-md-3 col-sm-3 col-xs-4">
                   <div class="product-item">
@@ -92,6 +95,7 @@
               </li>
             </ul>
           </div>
+          <?php endif?>
         </div>
       </div>
 

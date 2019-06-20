@@ -17,13 +17,16 @@ class TypeController extends Controller{
             return;
         }
         $qty = 8;
-        $position = 0;
+        $page = 1;
         if(isset($_GET['page'])){
             $page = $_GET['page'];
         }
-        else $page = 1;
-        // echo $page; die;
+        $position = ($page-1)*$qty;
         $products = $model->getProductByType($url, $position, $qty);
+        $totalProduct = count($model->getProductByType($url));
+        $totalPage = ceil($totalProduct/$qty);
+        
+        // echo $totalPage; die;
         $data = [
             'products'=> $products,
             'nameType'=> $type->name

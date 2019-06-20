@@ -9,6 +9,7 @@
   <![endif]-->
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title><?=$title?></title>
+  <base href="http://localhost/shopping0205/">
   <meta name="description" content="best template, template free, responsive theme, fashion store, responsive theme, responsive html theme, Premium website templates, web templates, Multi-Purpose Responsive HTML5 Template">
   <meta name="keywords" content="bootstrap, ecommerce, fashion, layout, responsive, responsive template, responsive template download, responsive theme, retail, shop, shopping, store, Premium website templates, web templates, Multi-Purpose Responsive HTML5 Template"
   />
