@@ -16,7 +16,14 @@ class TypeController extends Controller{
             header('Location: 404.html');
             return;
         }
-        $products = $model->getProductByType($url);
+        $qty = 8;
+        $position = 0;
+        if(isset($_GET['page'])){
+            $page = $_GET['page'];
+        }
+        else $page = 1;
+        // echo $page; die;
+        $products = $model->getProductByType($url, $position, $qty);
         $data = [
             'products'=> $products,
             'nameType'=> $type->name

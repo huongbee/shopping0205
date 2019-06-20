@@ -10,7 +10,7 @@ class TypeModel extends DBConnect{
                 WHERE status=1";
         return parent::getMoreRows($sql);
     }
-    function getProductByType(string $urlType){
+    function getProductByType(string $urlType, int $position=0, int $quantity = 8){
         $sql = "SELECT p.*, u.url
                 FROM products p
                 INNER JOIN page_url u
@@ -22,7 +22,8 @@ class TypeModel extends DBConnect{
                     ON c.id_url = pu.id
                     WHERE pu.url = '$urlType'
                 )
-                AND p.deleted=0";
+                AND p.deleted=0
+                LIMIT $position,$quantity";
         return $this->getMoreRows($sql);
     }
     function getTypeByUrl($url){
