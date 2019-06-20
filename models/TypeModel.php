@@ -21,7 +21,8 @@ class TypeModel extends DBConnect{
                     INNER JOIN page_url pu
                     ON c.id_url = pu.id
                     WHERE pu.url = '$urlType'
-                )";
+                )
+                AND p.deleted=0";
         return $this->getMoreRows($sql);
     }
     function getTypeByUrl($url){
@@ -29,7 +30,8 @@ class TypeModel extends DBConnect{
                 FROM categories c
                 INNER JOIN page_url pu
                 ON c.id_url = pu.id
-                WHERE pu.url = '$url'";
+                WHERE pu.url = '$url'
+                AND c.status = 1";
         return $this->getOneRow($sql);
               
     }

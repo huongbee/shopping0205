@@ -28,8 +28,8 @@
                         <div class="pr-img-area">
                           <a title="Ipsums Dolors Untra" href="<?= $product->url ?>.html">
                             <figure>
-                              <img class="first-img" src="public/source/images/products-images/<?= $product->image ?>" alt="html template">
-                              <img class="hover-img" src="public/source/images/products-images/<?= $product->image ?>" alt="html template">
+                              <img class="first-img" src="public/source/images/products-images/<?= $product->image ?>" alt="html template" height="200px">
+                              <img class="hover-img" src="public/source/images/products-images/<?= $product->image ?>" alt="html template"  height="200px">
                             </figure>
                           </a>
                           <button type="button" class="add-to-cart-mt">
