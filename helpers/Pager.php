@@ -26,7 +26,9 @@ class Pager{
 			$actual_link = ($_SERVER['REQUEST_SCHEME']=='http' ? "http" : "https") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 			$arr = explode('/', $actual_link); // string to array
-			unset($arr[count($arr)-1]); // remove last item of array
+			if(is_numeric($arr[count($arr)-1])){
+				unset($arr[count($arr)-1]); // remove last item of array
+			}
 			$actual_link  = implode('/',$arr); // array to string
 			
 			$start 	= ''; 
@@ -78,7 +80,7 @@ class Pager{
 					$listPages .= "<li><a class='active'>".$i.'</a>';
 				}
 				else{
-					$listPages .= "<li><a href='$actual_link/page=".$i."'>".$i.'</a>';
+					$listPages .= "<li><a href='$actual_link/".$i."'>".$i.'</a>';
 				}
 			}
 			$paginationHTML = '<ul>'.$start.$prev.$listPages.$next.$end.'</ul>';

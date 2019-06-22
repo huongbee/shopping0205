@@ -26,7 +26,7 @@ class TypeController extends Controller{
         $products = $model->getProductByType($url, $position, $qty);
         $totalProduct = count($model->getProductByType($url));
         
-        $pager = new Pager($totalProduct, $page, $qty, 3);
+        $pager = new Pager($totalProduct, $page, $qty, 5);
         $showPagination = $pager->showPagination();
         // echo $totalPage; die;
         $data = [
