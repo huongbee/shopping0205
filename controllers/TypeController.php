@@ -1,6 +1,7 @@
 <?php
 require_once 'Controller.php';
 require_once 'models/TypeModel.php';
+require_once 'helpers/Pager.php';
 
 class TypeController extends Controller{
     static function getTypePage(){
@@ -24,12 +25,14 @@ class TypeController extends Controller{
         $position = ($page-1)*$qty;
         $products = $model->getProductByType($url, $position, $qty);
         $totalProduct = count($model->getProductByType($url));
-        $totalPage = ceil($totalProduct/$qty);
         
+        $pager = new Pager($totalProduct, $page, $qty, 3);
+        $showPagination = $pager->showPagination();
         // echo $totalPage; die;
         $data = [
             'products'=> $products,
-            'nameType'=> $type->name
+            'nameType'=> $type->name,
+            'showPagination'=>$showPagination
         ];
         return parent::loadView('type', $data['nameType'], $data);
     }
