@@ -62,7 +62,11 @@
                         </div>
                       </div>
                     </div>
-                    <button class="button pro-add-to-cart" title="Add to Cart" type="button">
+                    <button class="button pro-add-to-cart"
+                    title="Add to Cart"
+                    type="button"
+                    data-id="<?=$data['product']->id?>"
+                    >
                       <span>
                         <i class="fa fa-shopping-cart"></i> Add to Cart</span>
                     </button>
