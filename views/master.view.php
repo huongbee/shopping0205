@@ -386,18 +386,30 @@
   <script>
     jQuery(document).ready(function(){
       $('.add-to-cart-mt, .button-cart').click(function(){
-        var idProduct = $(this).attr('data-id');
-        console.log(idProduct);
-      })
+        var idProduct = $(this).attr('data-id'); 
+        $.ajax({
+            url: 'cart.html',
+            type: 'POST',
+            data: {
+              id: idProduct, // $_POST['id'] = 22
+              quantity: 1,
+              action: 'add'
+            }
+        })
+      });
 
       $('.pro-add-to-cart').click(function(){
         var idProduct = $(this).attr('data-id');
-        /*
-        var idProduct = "<?=isset($data['product']) ? $data['product']->id: null?>";
-        */
         var quantity = $('.qty').val();
-
-        console.log(idProduct, quantity);
+        $.ajax({
+          url: 'cart.html',
+          type: 'POST',
+          data: {
+              id: idProduct,
+              quantity: quantity,
+              action: 'add'
+          }
+        })
       })
     })
   </script>
