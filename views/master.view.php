@@ -383,6 +383,14 @@
     $('.mega-menu-category').hide();
   </script>
 
+  <script>
+    jQuery(document).ready(function(){
+      $('.add-to-cart-mt').click(function(){
+        var idProduct = $(this).attr('data-id');
+        console.log(idProduct);
+      })
+    })
+  </script>
 
 
 </body>

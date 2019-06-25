@@ -35,7 +35,8 @@
                               <img class="hover-img" src="public/source/images/products-images/<?= $product->image ?>" alt="html template"  height="200px">
                             </figure>
                           </a>
-                          <button type="button" class="add-to-cart-mt">
+                          <button type="button" class="add-to-cart-mt"
+                          data-id="<?=$product->id?>">
                             <i class="fa fa-shopping-cart"></i>
                             <span> Add to Cart</span>
                           </button>
