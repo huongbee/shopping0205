@@ -2,6 +2,7 @@ RewriteEngine On
 
 RewriteRule ^trang-chu$ index.php
 RewriteRule ^home$ index.php
+RewriteRule ^index.html$ index.php
 RewriteRule ^404.html$ 404.php
 
 
