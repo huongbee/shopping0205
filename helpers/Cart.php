@@ -28,9 +28,9 @@ class Cart{
 			$giohang = $this->items[$product->id];
         }
 		
-		$giohang['qty'] =  $giohang['qty'] + $qty; // 2
-		$giohang['price'] = $product->price * $giohang['qty']; // 20.000
-		$giohang['promotionPrice'] = $product->promotion_price * $giohang['qty']; // 20.000
+		$giohang['qty'] =  $giohang['qty'] + $qty;
+		$giohang['price'] = $product->price * $giohang['qty'];
+		$giohang['promotionPrice'] = $product->promotion_price * $giohang['qty'];
 		$giohang['item'] = $product;
 
 		$this->items[$product->id] = $giohang;
