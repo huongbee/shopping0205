@@ -318,7 +318,7 @@
   </div>
 
   <div id="myMessage" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-sm">
+    <div class="modal-dialog modal-md">
 
       <!-- Modal content-->
       <div class="modal-content">
@@ -327,7 +327,7 @@
           <h4 class="modal-title"> message </h4>
         </div>
         <div class="modal-body">
-          <p> Sản phẩm .... đã thêm vào giỏ hàng</p>
+          <p> Sản phẩm <i>...</i> đã thêm vào giỏ hàng</p>
           <p><a href="cart.html"> Xem giỏ hàng</a></p>
         </div>
         <div class="modal-footer">
@@ -415,10 +415,15 @@
           dataType: 'JSON',
           success: function(response){
             // response : obj
+            if(response.success){
+              $('.modal-title').text(response.message)
+              $('.modal-body i').text(response.data.product_name)
+            }
+            else{
+              $('.modal-title').text('Error!')
+              $('.modal-body').text(response.message)
+            }
             $('#myMessage').modal('show')
-            console.log(response.message)
-            console.log(response.data.product_name)
-
           }
         })
       });
