@@ -8,11 +8,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <![endif]-->
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title><?=$title?></title>
+  <title><?= $title ?></title>
   <base href="http://localhost/shopping0205/">
   <meta name="description" content="best template, template free, responsive theme, fashion store, responsive theme, responsive html theme, Premium website templates, web templates, Multi-Purpose Responsive HTML5 Template">
-  <meta name="keywords" content="bootstrap, ecommerce, fashion, layout, responsive, responsive template, responsive template download, responsive theme, retail, shop, shopping, store, Premium website templates, web templates, Multi-Purpose Responsive HTML5 Template"
-  />
+  <meta name="keywords" content="bootstrap, ecommerce, fashion, layout, responsive, responsive template, responsive template download, responsive theme, retail, shop, shopping, store, Premium website templates, web templates, Multi-Purpose Responsive HTML5 Template" />
   <!-- Mobile specific metas  , -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -163,14 +162,14 @@
                 </div>
                 <div class="mega-menu-category">
                   <ul class="nav">
-                    <?php foreach($categories as $menu):?>
-                    <li class="nosub">
-                      <a href="<?=$menu->url?>">
-                        <i class="icon fa <?=$menu->icon?> fa-fw"></i> 
-                        <?=$menu->name?>
-                      </a>
-                    </li>
-                    <?php endforeach?>
+                    <?php foreach ($categories as $menu) : ?>
+                      <li class="nosub">
+                        <a href="<?= $menu->url ?>">
+                          <i class="icon fa <?= $menu->icon ?> fa-fw"></i>
+                          <?= $menu->name ?>
+                        </a>
+                      </li>
+                    <?php endforeach ?>
                   </ul>
                 </div>
               </div>
@@ -277,7 +276,7 @@
           </div>
         </div>
       </div>
-     
+
       <div class="footer-coppyright">
         <div class="container">
           <div class="row">
@@ -318,6 +317,25 @@
 
   </div>
 
+  <div id="myMessage" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-sm">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"> message </h4>
+        </div>
+        <div class="modal-body">
+          <p> Sản phẩm .... đã thêm vào giỏ hàng</p>
+          <p><a href="cart.html"> Xem giỏ hàng</a></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- JS -->
 
@@ -343,7 +361,7 @@
     /* <![CDATA[ */
     var mega_menu = '0';
 
-  /* ]]> */
+    /* ]]> */
   </script>
 
   <!-- jquery.mobile-menu js -->
@@ -360,23 +378,22 @@
 
   <!-- Revolution Slider -->
   <script type="text/javascript">
-    jQuery(document).ready(function () {
-      jQuery('.tp-banner').revolution(
-        {
-          delay: 9000,
-          startwidth: 1170,
-          startheight: 530,
-          hideThumbs: 10,
+    jQuery(document).ready(function() {
+      jQuery('.tp-banner').revolution({
+        delay: 9000,
+        startwidth: 1170,
+        startheight: 530,
+        hideThumbs: 10,
 
-          navigationType: "bullet",
-          navigationStyle: "preview1",
+        navigationType: "bullet",
+        navigationStyle: "preview1",
 
-          hideArrowsOnMobile: "on",
+        hideArrowsOnMobile: "on",
 
-          touchenabled: "on",
-          onHoverStop: "on",
-          spinner: "spinner4"
-        });
+        touchenabled: "on",
+        onHoverStop: "on",
+        spinner: "spinner4"
+      });
     });
 
     // $('.mega-menu-category').css({ display: "none"})
@@ -384,30 +401,36 @@
   </script>
 
   <script>
-    jQuery(document).ready(function(){
-      $('.add-to-cart-mt, .button-cart').click(function(){
-        var idProduct = $(this).attr('data-id'); 
+    jQuery(document).ready(function() {
+      $('.add-to-cart-mt, .button-cart').click(function() {
+        var idProduct = $(this).attr('data-id');
         $.ajax({
-            url: 'cart.html',
-            type: 'POST',
-            data: {
-              id: idProduct, // $_POST['id'] = 22
-              quantity: 1,
-              action: 'add'
-            }
+          url: 'cart.html',
+          type: 'POST',
+          data: {
+            id: idProduct, // $_POST['id'] = 22
+            quantity: 1,
+            action: 'add'
+          },
+          success: function(){
+            $('#myMessage').modal('show')
+          }
         })
       });
 
-      $('.pro-add-to-cart').click(function(){
+      $('.pro-add-to-cart').click(function() {
         var idProduct = $(this).attr('data-id');
         var quantity = $('.qty').val();
         $.ajax({
           url: 'cart.html',
           type: 'POST',
           data: {
-              id: idProduct,
-              quantity: quantity,
-              action: 'add'
+            id: idProduct,
+            quantity: quantity,
+            action: 'add'
+          },
+          success: function(){
+            $('#myMessage').modal('show')
           }
         })
       })
