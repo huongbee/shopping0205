@@ -412,8 +412,13 @@
             quantity: 1,
             action: 'add'
           },
-          success: function(){
+          dataType: 'JSON',
+          success: function(response){
+            // response : obj
             $('#myMessage').modal('show')
+            console.log(response.message)
+            console.log(response.data.product_name)
+
           }
         })
       });
@@ -429,8 +434,10 @@
             quantity: quantity,
             action: 'add'
           },
-          success: function(){
+          success: function(response){
             $('#myMessage').modal('show')
+            console.log(response)
+
           }
         })
       })
