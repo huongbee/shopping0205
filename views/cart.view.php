@@ -8,6 +8,9 @@
   margin-left: 5px;
   cursor: pointer;
 }
+i.icon-close{
+  cursor: pointer;  
+}
 </style>
 <section class="main-container col1-layout">
   <div class="main container">
@@ -37,7 +40,7 @@
                   <?php
                   $cart = $data['cart'];
                   foreach($cart->items as $product):?>
-                  <tr>
+                  <tr class="parent-<?=$product['item']->id?>">
                     <td class="cart_product"><a href="#"><img src="public/source/images/products-images/<?=$product['item']->image?>" alt="<?=$product['item']->name?>"></a></td>
                     <td class="cart_description">
                       <p class="product-name"><a href="<?=$product['item']->url?>.html"><?=$product['item']->name?></a></p>
@@ -56,7 +59,7 @@
                     </td>
                     <td class="qty">
                       <input class="form-control input-sm" type="text" value="<?=$product['qty']?>">
-                      <i class="glyphicon glyphicon-pencil"></i>
+                      <i title="Cập nhật" class="glyphicon glyphicon-pencil"></i>
                     </td>
                     <td class="price">
                     <?php if($product['price'] != $product['promotionPrice']):?>
@@ -70,7 +73,9 @@
                         <?=number_format($product['promotionPrice'])?>
                       </p>
                     </td>
-                    <td class="action"><a href="#"><i class="icon-close"></i></a></td>
+                    <td class="action"><a><i class="icon-close"
+                    data-id="<?=$product['item']->id?>"
+                    ></i></a></td>
                   </tr>
                   <?php endforeach?>
                 </tbody>
@@ -78,11 +83,13 @@
                   <tr>
                     <td colspan="2" rowspan="2"></td>
                     <td colspan="3">Tổng tiền</td>
-                    <td colspan="2"><?=number_format($cart->totalPrice)?></td>
+                    <td colspan="2"
+                    class="totalPrice"
+                    ><?=number_format($cart->totalPrice)?></td>
                   </tr>
                   <tr>
                     <td colspan="3"><strong>Thanh toán</strong></td>
-                    <td colspan="2"><strong><?=number_format($cart->promtPrice)?></strong></td>
+                    <td colspan="2"><strong class="promtPrice"><?=number_format($cart->promtPrice)?></strong></td>
                   </tr>
                 </tfoot>
               </table>
@@ -96,3 +103,24 @@
     </div>
   </div>
 </section>
+<script>
+  $('.icon-close').click(function(){
+    var idProduct = $(this).attr('data-id')
+    $.ajax({
+      url: 'cart.html',
+      data: {
+        id: idProduct,
+        action: 'delete'
+      },
+      type: 'POST',
+      dataType: 'JSON',
+      success: function(response){
+        if(response.success){
+          $('.parent-'+idProduct).hide(500)
+          $('.promtPrice').text(response.promtPrice)
+          $('.totalPrice').text(response.totalPrice)
+        }
+      }
+    })
+  })
+</script>

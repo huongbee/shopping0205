@@ -49,7 +49,18 @@ class CartController extends Controller{
         ]) ;
         return false;
     }
-    static function deleteCart(){}
+    static function deleteCart(){
+        $id = $_POST['id'];
+        $oldCart = isset($_SESSION['cart']) ? $_SESSION['cart'] : null;
+        $cart = new Cart($oldCart);
+        $cart->removeItem($id);
+        $_SESSION['cart'] = $cart;
+        echo json_encode([
+            'success'=> true,
+            'totalPrice' => number_format($cart->totalPrice),
+            'promtPrice' => number_format($cart->promtPrice)
+        ]);
+    }
     static function updateCart(){}
 
 }

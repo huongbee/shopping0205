@@ -51,6 +51,8 @@
 
   <!-- style CSS -->
   <link rel="stylesheet" type="text/css" href="public/source/css/style.css" media="all">
+    <!-- jquery js -->
+    <script type="text/javascript" src="public/source/js/jquery.min.js"></script>
 </head>
 
 <body class="cms-index-index cms-home-page">
@@ -342,10 +344,7 @@
     </div>
   </div>
 
-  <!-- JS -->
 
-  <!-- jquery js -->
-  <script type="text/javascript" src="public/source/js/jquery.min.js"></script>
 
   <!-- bootstrap js -->
   <script type="text/javascript" src="public/source/js/bootstrap.min.js"></script>
