@@ -1,4 +1,14 @@
 <!-- Main Container -->
+<style>
+.qty input, .qty i{
+  float: left
+}
+.qty i{
+  line-height: 30px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+</style>
 <section class="main-container col1-layout">
   <div class="main container">
     <div class="col-main">
@@ -44,7 +54,10 @@
                         <?=number_format($product['item']->promotion_price)?>
                       </p>
                     </td>
-                    <td class="qty"><input class="form-control input-sm" type="text" value="<?=$product['qty']?>"></td>
+                    <td class="qty">
+                      <input class="form-control input-sm" type="text" value="<?=$product['qty']?>">
+                      <i class="glyphicon glyphicon-pencil"></i>
+                    </td>
                     <td class="price">
                     <?php if($product['price'] != $product['promotionPrice']):?>
                       <p style="color:#333e48; font-weight:normal">
