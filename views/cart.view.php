@@ -33,13 +33,30 @@
                       <p class="product-name"><a href="#"><?=$product['item']->name?></a></p>
                     </td>
                     <td class="price">
+                      <?php if($product['price'] != $product['promotionPrice']):?>
                       <p style="color:#333e48; font-weight:normal">
-                        <del><?=number_format($product['item']->price)?></del>
+                        <del>
+                          <?=number_format($product['item']->price)?>
+                        </del>
                       </p>
-                      <p><?=number_format($product['item']->promotion_price)?></p>
+                      <?php endif?>
+                      <p>
+                        <?=number_format($product['item']->promotion_price)?>
+                      </p>
                     </td>
-                    <td class="qty"><input class="form-control input-sm" type="text" value="1"></td>
-                    <td class="price"><span>$49.88</span></td>
+                    <td class="qty"><input class="form-control input-sm" type="text" value="<?=$product['qty']?>"></td>
+                    <td class="price">
+                    <?php if($product['price'] != $product['promotionPrice']):?>
+                      <p style="color:#333e48; font-weight:normal">
+                        <del>
+                          <?=number_format($product['price'])?>
+                        </del>
+                      </p>
+                      <?php endif?>
+                      <p>
+                        <?=number_format($product['promotionPrice'])?>
+                      </p>
+                    </td>
                     <td class="action"><a href="#"><i class="icon-close"></i></a></td>
                   </tr>
                   <?php endforeach?>
@@ -48,11 +65,11 @@
                   <tr>
                     <td colspan="2" rowspan="2"></td>
                     <td colspan="3">Tổng tiền</td>
-                    <td colspan="2">$237.88 </td>
+                    <td colspan="2"><?=number_format($cart->totalPrice)?></td>
                   </tr>
                   <tr>
                     <td colspan="3"><strong>Thanh toán</strong></td>
-                    <td colspan="2"><strong>$237.88 </strong></td>
+                    <td colspan="2"><strong><?=number_format($cart->promtPrice)?></strong></td>
                   </tr>
                 </tfoot>
               </table>
