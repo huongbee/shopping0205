@@ -6,7 +6,11 @@ session_start();
 
 class CartController extends Controller{
     static function getCartPage(){
-        return parent::loadView('cart');
+        $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : null;
+        $data = [
+            'cart' => $cart
+        ];
+        return parent::loadView('cart','Giỏ hàng của bạn', $data);
     }
     static function addToCart(){
         if(!isset($_POST['id'])){

@@ -439,10 +439,17 @@
             quantity: quantity,
             action: 'add'
           },
+          dataType:'JSON',
           success: function(response){
+            if(response.success){
+              $('.modal-title').text(response.message)
+              $('.modal-body i').text(response.data.product_name)
+            }
+            else{
+              $('.modal-title').text('Error!')
+              $('.modal-body').text(response.message)
+            }
             $('#myMessage').modal('show')
-            console.log(response)
-
           }
         })
       })
