@@ -123,14 +123,19 @@
             <div class="col-lg-3 col-xs-3 top-cart">
               <div class="top-cart-contain">
                 <div class="mini-cart">
-                  <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle">
-                    <a href="#">
+                  <div class="basket dropdown-toggle">
+                    <a href="cart.html">
                       <div class="cart-icon">
                         <i class="fa fa-shopping-cart"></i>
                       </div>
                       <div class="shoppingcart-inner hidden-xs">
                         <span class="cart-title">Shopping Cart</span>
-                        <span class="cart-total">4 Item(s): $520.00</span>
+                        <span class="cart-total">
+                          <?php
+                          echo isset($_SESSION['cart']) ? $_SESSION['cart']->totalQty : 0; 
+                          ?>
+                          Item(s)
+                        </span>
                       </div>
                     </a>
                   </div>

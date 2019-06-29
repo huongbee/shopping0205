@@ -30,7 +30,7 @@
                   <tr>
                     <td class="cart_product"><a href="#"><img src="public/source/images/products-images/<?=$product['item']->image?>" alt="<?=$product['item']->name?>"></a></td>
                     <td class="cart_description">
-                      <p class="product-name"><a href="#"><?=$product['item']->name?></a></p>
+                      <p class="product-name"><a href="<?=$product['item']->url?>.html"><?=$product['item']->name?></a></p>
                     </td>
                     <td class="price">
                       <?php if($product['price'] != $product['promotionPrice']):?>
