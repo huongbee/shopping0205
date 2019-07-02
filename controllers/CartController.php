@@ -87,7 +87,15 @@ class CartController extends Controller{
         $cart = new Cart($oldCart);
         $cart->update($product, $qty);
         $_SESSION['cart'] = $cart;
-        print_r($cart);
+        // print_r($cart);
+        echo json_encode([
+            'success'=> true,
+            'price' => number_format($cart->items[$id]['price']),
+            'promotionPrice' => number_format($cart->items[$id]['promotionPrice']),
+            'totalPrice' => number_format($cart->totalPrice),
+            'promtPrice'=> number_format($cart->promtPrice),
+            'totalQty' => $cart->totalQty
+        ]);
     }
 
 }

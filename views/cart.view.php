@@ -66,12 +66,12 @@ i.icon-close{
                     <td class="price">
                     <?php if($product['price'] != $product['promotionPrice']):?>
                       <p style="color:#333e48; font-weight:normal">
-                        <del>
+                        <del class="price-<?=$product['item']->id?>">
                           <?=number_format($product['price'])?>
                         </del>
                       </p>
                       <?php endif?>
-                      <p>
+                      <p class="promotionPrice-<?=$product['item']->id?>">
                         <?=number_format($product['promotionPrice'])?>
                       </p>
                     </td>
@@ -142,9 +142,15 @@ i.icon-close{
         quantity: qty,
         action: 'update'
       },
-      // dataType: 'JSON',
+      dataType: 'JSON',
       success: function(response){
-        console.log(response)
+        // console.log(response)
+        if(response.success){
+          if(response.price != response.promotionPrice){
+            $('.price-'+idProduct).text(response.price)
+          }
+          $('.promotionPrice-'+idProduct).text(response.promotionPrice)
+        }
       },
       error: function(){
         alert('Vui lòng thử lại')
