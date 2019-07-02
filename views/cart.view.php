@@ -128,6 +128,12 @@ i.icon-close{
   $('.btn-update').click(function(){
     var idProduct = $(this).attr('data-id')
     var qty = $('.txt-qty-'+idProduct).val()
+    if(qty<=0 || qty=='') {
+      alert('Số lượng phải lớn hơn 0') // message
+      $('.txt-qty-'+idProduct).val('') // clear value 0
+      $('.txt-qty-'+idProduct).focus() // focus mouse into input
+      return false; // exit
+    }
     $.ajax({
       url: 'cart.html',
       type: 'POST',

@@ -62,9 +62,32 @@ class CartController extends Controller{
         ]);
     }
     static function updateCart(){
+        if(!isset($_POST['id'])){
+            echo json_encode([
+                'success' => false,
+                'message' => 'Missing id product!',
+                'data' => null
+            ]) ;
+            return false;
+        }
+        if(!isset($_POST['quantity']) || $_POST['quantity']<=0){
+            echo json_encode([
+                'success' => false,
+                'message' => 'Invalid quantity!',
+                'data' => null
+            ]) ;
+            return false;
+        }
         $id = $_POST['id'];
         $qty = $_POST['quantity'];
-        echo $id .' - '. $qty;
+
+        $model = new CartModel();
+        $product = $model->findProductById($id);
+        $oldCart = isset($_SESSION['cart']) ? $_SESSION['cart'] : null;
+        $cart = new Cart($oldCart);
+        $cart->update($product, $qty);
+        $_SESSION['cart'] = $cart;
+        print_r($cart);
     }
 
 }
