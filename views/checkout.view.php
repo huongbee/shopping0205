@@ -21,7 +21,7 @@
                     <li class="row">
                         <div class="col-sm-6">
                             <label class="required">Giới tính</label>
-                                <select class="input form-control" name="">
+                                <select class="input form-control" name="gender">
                                     <option value="Nam">Nam</option>
                                     <option value="Nữ">Nữ</option>
                                     <option value="Khác">Khác</option>
