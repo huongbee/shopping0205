@@ -58,7 +58,8 @@ i.icon-close{
                       </p>
                     </td>
                     <td class="qty">
-                      <input class="form-control input-sm txt-qty" type="text" value="<?=$product['qty']?>">
+                      <input class="form-control input-sm
+                      txt-qty-<?=$product['item']->id?>" type="text" value="<?=$product['qty']?>">
                       <i title="Cập nhật" class="glyphicon glyphicon-pencil btn-update"
                       data-id="<?=$product['item']->id?>"></i>
                     </td>
@@ -126,7 +127,7 @@ i.icon-close{
   })
   $('.btn-update').click(function(){
     var idProduct = $(this).attr('data-id')
-    var qty = $('.txt-qty').val()
+    var qty = $('.txt-qty-'+idProduct).val()
     console.log(idProduct, qty);
   })
 </script>
