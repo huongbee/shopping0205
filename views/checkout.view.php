@@ -10,98 +10,56 @@
                 <ul>
                     <li class="row">
                         <div class="col-sm-6">
-                            <label for="first_name" class="required">First Name</label>
-                            <input type="text" class="input form-control" name="" id="first_name">
+                            <label for="first_name" class="required">Họ tên</label>
+                            <input type="text" class="input form-control" name="fullname" id="first_name" require>
                         </div><!--/ [col] -->
                         <div class="col-sm-6">
-                            <label for="last_name" class="required">Last Name</label>
-                            <input type="text" name="" class="input form-control" id="last_name">
+                            <label for="last_name" class="required">Email</label>
+                            <input type="email" name="email" class="input form-control" id="last_name" require>
                         </div><!--/ [col] -->
                     </li><!--/ .row -->
                     <li class="row">
                         <div class="col-sm-6">
-                            <label for="company_name">Company Name</label>
-                            <input type="text" name="" class="input form-control" id="company_name">
+                            <label class="required">Giới tính</label>
+                                <select class="input form-control" name="">
+                                    <option value="Nam">Nam</option>
+                                    <option value="Nữ">Nữ</option>
+                                    <option value="Khác">Khác</option>
+                            </select>
+                            
                         </div><!--/ [col] -->
                         <div class="col-sm-6">
-                            <label for="email_address" class="required">Email Address</label>
-                            <input type="text" class="input form-control" name="" id="email_address">
+                            <label for="phone" class="required">Số điện thoại</label>
+                            <input type="text" class="input form-control" name="phone" id="phone">
                         </div><!--/ [col] -->
                     </li><!--/ .row -->
                     <li class="row"> 
-                        <div class="col-xs-12">
-
-                            <label for="address" class="required">Address</label>
-                            <input type="text" class="input form-control" name="" id="address">
-
-                        </div><!--/ [col] -->
-
-                    </li><!-- / .row -->
-
-                    <li class="row">
 
                         <div class="col-sm-6">
+                            <label for="company_name">Địa chỉ</label>
+                            <input type="text" name="address" class="input form-control" require id="company_name">
+                        </div><!--/ [col] -->
+                        <div class="col-sm-6">
+                            <label class="required">Chọn hình thức thanh toán</label>
+                                <select class="input form-control" name="payment_method">
+                                    <option value="COD">COD</option>
+                                    <option value="chuyenkhoan">Chuyển khoản</option>
+                            </select>
                             
-                            <label for="city" class="required">City</label>
-                            <input class="input form-control" type="text" name="" id="city">
-
                         </div><!--/ [col] -->
-
-                        <div class="col-sm-6">
-                            <label class="required">State/Province</label>
-                                <select class="input form-control" name="">
-                                    <option value="Alabama">Alabama</option>
-                                    <option value="Illinois">Illinois</option>
-                                    <option value="Kansas">Kansas</option>
-                            </select>
-                        </div><!--/ [col] -->
-                    </li><!--/ .row -->
-
+                    
+                    </li><!-- / .row -->
                     <li class="row">
-
-                        <div class="col-sm-6">
-
-                            <label for="postal_code" class="required">Zip/Postal Code</label>
-                            <input class="input form-control" type="text" name="" id="postal_code">
-                        </div><!--/ [col] -->
-
-                        <div  class="col-sm-6">
-                            <label class="required">Country</label>
-                            <select class="input form-control" name="">
-                                <option value="USA">USA</option>
-                                <option value="Australia">Australia</option>
-                                <option value="Austria">Austria</option>
-                                <option value="Argentina">Argentina</option>
-                                <option value="Canada">Canada</option>
-                            </select>
-                        </div><!--/ [col] -->
-                    </li><!--/ .row -->
-                    <li class="row">
-                        <div class="col-sm-6">
-                            <label for="telephone" class="required">Telephone</label>
-                            <input class="input form-control" type="text" name="" id="telephone">
-                        </div><!--/ [col] -->
-
-                        <div class="col-sm-6">
-                            <label for="fax">Fax</label>
-                            <input class="input form-control" type="text" name="" id="fax">
-                        </div><!--/ [col] -->
-
-                    </li><!--/ .row -->
-
-                    <li class="row">
-                        <div class="col-sm-6">
-                            <label for="password" class="required">Password</label>
-                            <input class="input form-control" type="password" name="" id="password">
-                        </div><!--/ [col] -->
-
-                        <div class="col-sm-6">
-                            <label for="confirm" class="required">Confirm Password</label>
-                            <input class="input form-control" type="password" name="" id="confirm">
-                        </div><!--/ [col] -->
-                    </li><!--/ .row -->
+                        <div class="col-sm-12">
+                            <label for="note">Ghi chú đơn hàng</label>
+                            <textarea name="note" class="form-control" require id="note"></textarea>
+                        </div>
+                    </li>
                     <li>
-                        <button class="button"><i class="fa fa-angle-double-right"></i>&nbsp; <span>Continue</span></button>
+                        <button class="button"><i class="fa fa-angle-double-right"></i>&nbsp; <span>Đặt hàng</span></button>
+                    </li>
+                    <li>
+                        <p>Thông tin thanh toán ...</p>
                     </li>
                 </ul>
             </div>
