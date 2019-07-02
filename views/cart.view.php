@@ -150,6 +150,9 @@ i.icon-close{
             $('.price-'+idProduct).text(response.price)
           }
           $('.promotionPrice-'+idProduct).text(response.promotionPrice)
+          $('.totalPrice').text(response.totalPrice);
+          $('.promtPrice').text(response.promtPrice)
+          $('.cart-total').text(response.totalQty + ' Item(s)')
         }
       },
       error: function(){
