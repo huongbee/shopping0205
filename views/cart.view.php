@@ -128,6 +128,21 @@ i.icon-close{
   $('.btn-update').click(function(){
     var idProduct = $(this).attr('data-id')
     var qty = $('.txt-qty-'+idProduct).val()
-    console.log(idProduct, qty);
+    $.ajax({
+      url: 'cart.html',
+      type: 'POST',
+      data: {
+        id: idProduct,
+        quantity: qty,
+        action: 'update'
+      },
+      // dataType: 'JSON',
+      success: function(response){
+        console.log(response)
+      },
+      error: function(){
+        alert('Vui lòng thử lại')
+      }
+    })
   })
 </script>

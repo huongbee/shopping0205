@@ -61,7 +61,11 @@ class CartController extends Controller{
             'promtPrice' => number_format($cart->promtPrice)
         ]);
     }
-    static function updateCart(){}
+    static function updateCart(){
+        $id = $_POST['id'];
+        $qty = $_POST['quantity'];
+        echo $id .' - '. $qty;
+    }
 
 }
 ?>
