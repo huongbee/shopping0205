@@ -58,8 +58,9 @@ i.icon-close{
                       </p>
                     </td>
                     <td class="qty">
-                      <input class="form-control input-sm" type="text" value="<?=$product['qty']?>">
-                      <i title="Cập nhật" class="glyphicon glyphicon-pencil"></i>
+                      <input class="form-control input-sm txt-qty" type="text" value="<?=$product['qty']?>">
+                      <i title="Cập nhật" class="glyphicon glyphicon-pencil btn-update"
+                      data-id="<?=$product['item']->id?>"></i>
                     </td>
                     <td class="price">
                     <?php if($product['price'] != $product['promotionPrice']):?>
@@ -122,5 +123,10 @@ i.icon-close{
         }
       }
     })
+  })
+  $('.btn-update').click(function(){
+    var idProduct = $(this).attr('data-id')
+    var qty = $('.txt-qty').val()
+    console.log(idProduct, qty);
   })
 </script>
