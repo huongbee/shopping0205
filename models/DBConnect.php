@@ -56,6 +56,14 @@ class DBConnect{
         }
         return false;
     }
+
+    /**
+     * Use after Insert 1 row
+     * @return int id
+     */
+    function getRecentIdInsert(){
+        return $this->connection->lastInsertId();
+    }
 }
 
 ?>
