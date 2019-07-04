@@ -28,9 +28,15 @@ class CheckoutController extends Controller{
             header('http://localhost/shopping0205/checkout.php');
             return;
         }
+        $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : null;
+        if($cart == null){
+            $_SESSION['error'] = 'Vui lòng mua hàng';
+            header('http://localhost/shopping0205/checkout.php');
+            return;
+        }
         $dateOrder = date('Y-m-d', time());
-        $total = '';
-        $promtPrice = '';
+        $total = $cart->totalPrice;
+        $promtPrice = $cart->promtPrice;
         $token = ''; 
         $tokenDate = date('Y-m-d H:i:s', time());
 
@@ -41,6 +47,21 @@ class CheckoutController extends Controller{
             return;
         }
         // insert bill_detail
+        foreach($cart->items as $idProduct => $cartDetail){
+            $quantity = $cartDetail['qty'];
+            $price = $cartDetail['price'];
+            $promotionPrice = $cartDetail['promotionPrice'];
+            $detail = $model->insertBillDetail($idBill, $idProduct, $quantity, $price, $promotionPrice);
+            if(!$detail){
+                $_SESSION['error'] = 'Vui lòng thử lại 3';
+                header('http://localhost/shopping0205/checkout.php');
+                return;
+            }
+        }
+        // send email 
+        $_SESSION['success'] = 'Đặt hàng thành công, vui lòng kiểm tra email để xác nhận đơn hàng';
+        header('http://localhost/shopping0205/checkout.php');
+        return;
     }
 }
 ?>
