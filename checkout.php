@@ -1,5 +1,7 @@
 <?php
 require_once 'controllers/CheckoutController.php';
-CheckoutController::getCheckoutPage();
+if(isset($_POST['btnCheckout']))
+    return CheckoutController::postCheckout();
+return CheckoutController::getCheckoutPage();
 
 ?>
