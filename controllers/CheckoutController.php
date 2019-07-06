@@ -38,7 +38,7 @@ class CheckoutController extends Controller{
         $dateOrder = date('Y-m-d', time());
         $total = $cart->totalPrice;
         $promtPrice = $cart->promtPrice;
-        $token = ''; 
+        $token = '';  // not yet : length = 40
         $tokenDate = date('Y-m-d H:i:s', time());
 
         $idBill = $model->insertBill($idCustomer, $dateOrder, $total, $promtPrice, $paymentMethod, $note, $token, $tokenDate, 0);
