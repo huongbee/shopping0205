@@ -7,6 +7,9 @@ require_once 'helpers/PHPMailer/sendmail.php';
 session_start();
 
 class CheckoutController extends Controller{
+    function __construct(){
+        date_default_timezone_set('Asia/Ho_Chi_Minh');
+    }
     static function getCheckoutPage(){
         return parent::loadView('checkout');
     }
@@ -94,7 +97,30 @@ class CheckoutController extends Controller{
         }
         $model = new CheckoutModel();
         $bill = $model->findBillByToken($token);
-        print_r($bill);
+        if(!$bill){
+            $_SESSION['error'] = 'Liên kết fail, vui lòng thử lại.';
+            header('location: http://localhost/shopping0205/checkout.php');
+            return;
+        }
+
+        $tokenTime = strtotime($bill->token_date);
+        $now = time();
+        if($now - $tokenTime <= 86400){
+            // update trang thai
+            $check = $model->updateStatusBill($bill->id);
+            if($check){
+                    $_SESSION['success'] = 'ĐH của bạn đã được xác nhận. Chúng tôi sẽ liên hệ bạn để giao hàng trong time soon.';
+                    header('location: http://localhost/shopping0205/checkout.php');
+            }
+            else{
+                $_SESSION['error'] = 'Có lỗi xảy ra, vui lòng thử lại.';
+                header('location: http://localhost/shopping0205/checkout.php');
+            }
+        }
+        else {
+            $_SESSION['error'] = 'ĐH của bạn đã hết hiệu lực để xác nhận, vui lòng đặt hàng lại.';
+            header('location: http://localhost/shopping0205/checkout.php');
+        }
 
 
     }
