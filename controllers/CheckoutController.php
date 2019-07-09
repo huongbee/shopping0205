@@ -2,6 +2,7 @@
 require_once 'Controller.php';
 require_once 'models/CheckoutModel.php';
 require_once 'helpers/Cart.php';
+require_once 'helpers/functions.php';
 session_start();
 
 class CheckoutController extends Controller{
@@ -38,7 +39,7 @@ class CheckoutController extends Controller{
         $dateOrder = date('Y-m-d', time());
         $total = $cart->totalPrice;
         $promtPrice = $cart->promtPrice;
-        $token = '';  // not yet : length = 40
+        $token = createToken(); 
         $tokenDate = date('Y-m-d H:i:s', time());
 
         $idBill = $model->insertBill($idCustomer, $dateOrder, $total, $promtPrice, $paymentMethod, $note, $token, $tokenDate, 0);
