@@ -62,7 +62,7 @@ class CheckoutController extends Controller{
             }
         }
         // send email 
-        $link = "";
+        $link = "http://localhost/shopping0205/accept-order/$token";
         $totalCart = number_format($total);
         $body = "
             <p>Chào $name,</p>
@@ -71,12 +71,19 @@ class CheckoutController extends Controller{
             <p><i>Shop 0205</i><p>
         ";
         $title = "SHOP0205 Xác nhận đơn hàng DH-000$idBill";
-        sendMail($email, $name, $body, $title);
-        // clear SESSION
-
-        $_SESSION['success'] = 'Đặt hàng thành công, vui lòng kiểm tra email để xác nhận đơn hàng';
-        header('Location: http://localhost/shopping0205/checkout.php');
-        return;
+        $mail = sendMail($email, $name, $body, $title);
+        if($mail){
+            // clear SESSION
+            unset($_SESSION['cart']);
+            $_SESSION['success'] = 'Đặt hàng thành công, vui lòng kiểm tra email để xác nhận đơn hàng';
+            header('Location: http://localhost/shopping0205/checkout.php');
+            return;
+        }
+        else{
+            $_SESSION['error'] = 'Vui lòng thử lại 3';
+            header('Location: http://localhost/shopping0205/checkout.php');
+            return;
+        }
     }
 }
 ?>

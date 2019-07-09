@@ -11,6 +11,7 @@ RewriteRule ^cart.html$ cart.php
 RewriteRule ^([a-zA-Z0-9-]+)$ type.php?link=$1
 RewriteRule ^([a-zA-Z0-9-]+)/([0-9]+)$ type.php?link=$1&page=$2
 RewriteRule ^([a-zA-Z0-9-()]+).html$ detail.php?link=$1
+RewriteRule ^accept-order/([a-zA-Z0-9]+)$ accept-order.php?token=$1
 
 
 # RewriteRule ^/?secret.txt$ - [F,L]
