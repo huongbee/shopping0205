@@ -86,5 +86,17 @@ class CheckoutController extends Controller{
             return;
         }
     }
+    function acceptOrder(){
+        $token = $_GET['token']; 
+        if(!isset($token) || strlen($token) != 40){
+            header('Location: 404.html');
+            return;
+        }
+        $model = new CheckoutModel();
+        $bill = $model->findBillByToken($token);
+        print_r($bill);
+
+
+    }
 }
 ?>
