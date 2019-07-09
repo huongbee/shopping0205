@@ -37,6 +37,7 @@ class CheckoutController extends Controller{
             header('Location: http://localhost/shopping0205/checkout.php');
             return;
         }
+        date_default_timezone_set('Asia/Ho_Chi_Minh');
         $dateOrder = date('Y-m-d', time());
         $total = $cart->totalPrice;
         $promtPrice = $cart->promtPrice;
