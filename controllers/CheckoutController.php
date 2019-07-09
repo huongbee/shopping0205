@@ -3,6 +3,7 @@ require_once 'Controller.php';
 require_once 'models/CheckoutModel.php';
 require_once 'helpers/Cart.php';
 require_once 'helpers/functions.php';
+require_once 'helpers/PHPMailer/sendmail.php';
 session_start();
 
 class CheckoutController extends Controller{
@@ -60,8 +61,19 @@ class CheckoutController extends Controller{
                 return;
             }
         }
-        // clear SESSION
         // send email 
+        $link = "";
+        $totalCart = number_format($total);
+        $body = "
+            <p>Chào $name,</p>
+            <p>Cảm ơn bạn đã mua hàng, tổng giá trị đơn hàng là: $totalCart vnđ</p>
+            <p>Bạn vui lòng nhấp vào <a href='$link'>liên kết</a> để xác nhận đơn hàng.</p>
+            <p><i>Shop 0205</i><p>
+        ";
+        $title = "SHOP0205 Xác nhận đơn hàng DH-000$idBill";
+        sendMail($email, $name, $body, $title);
+        // clear SESSION
+
         $_SESSION['success'] = 'Đặt hàng thành công, vui lòng kiểm tra email để xác nhận đơn hàng';
         header('Location: http://localhost/shopping0205/checkout.php');
         return;
